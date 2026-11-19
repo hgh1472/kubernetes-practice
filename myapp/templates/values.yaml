@@ -1,8 +1,8 @@
-replicaCounts: 3
+replicaCount: 3
 
 image:
  repository: nginx
- tag: "1.24"
+ tag: "1.25"
  pullPolicy: IfNotPresent
 
 serviceAccount:
@@ -19,9 +19,9 @@ ingress:
  className: nginx
  hosts:
    - host: myapp.local
-    paths:
-      - path: /
-        pathType: Prefix
+     paths:
+       - path: /
+         pathType: Prefix
 
 resources:
  requests:
@@ -54,6 +54,6 @@ tolerations: []
 
 affinity: {}
 
-seviceAccount:
+serviceAccount:
  create: false
- name: ""
+ name : ""
